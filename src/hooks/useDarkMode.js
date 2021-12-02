@@ -3,8 +3,8 @@ import axios from "axios";
 
 import useLocalStorage from "./useLocalStorage";
 
-const useDarkMode = () => {
-    const [storedValue, setValue] = useLocalStorage('darkMode')
+const useDarkMode = (initialValue) => {
+    const [storedValue, setValue] = useLocalStorage('darkMode', initialValue)
     return[storedValue, setValue];
 }
 
